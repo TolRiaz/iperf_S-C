@@ -1,8 +1,5 @@
 #!/bin/bash
 
-if $1 
-then
-	iperf -s -u -i1
-else
-	iperf -s -u -i$1
-fi
+test='iperf -s -u -i1'
+
+while $test | grep SUM; do echo $(test) > index.html; done
