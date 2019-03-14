@@ -2,10 +2,10 @@
 #include <string.h>
 
 int main(void) {
-	int cnt = 50;
+	int cnt = 100;
 	char input[cnt];
 	while (1) {
-		scanf("%s", input);
+		fgets(input, sizeof(input), stdin);
 		FILE *fp = fopen("index.html", "w");
 		if (input != "") {
 			fprintf(fp, "%s", input);
