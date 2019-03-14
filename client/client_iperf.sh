@@ -2,7 +2,7 @@
 
 if $1 && $2
 then
-	ipf='0'
+	echo "ERROR ex) client_iperf.sh {IP address} {Mbits}"
 else
 	ipf="iperf -c $1 -u -i1 -b$2M"
 fi
