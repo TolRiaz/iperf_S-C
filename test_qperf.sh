@@ -10,7 +10,7 @@ do
         if [ "$currentCNT" -eq $timer ]; then
                 # kill iperf
                 if [ "$currentBW" -ne 0 ]; then
-                    kill -9 $(ps -ef | grep "iperf -c" | grep -v grep | awk '{print $2}') &
+                    kill -9 $(ps -ef | grep "iperf -c" | grep -v grep | awk '{print $2}')
                 fi
                 iperf -c 220.149.13.181 -u -b$(($currentBW))M -t 300 &
                 currentCNT=0
