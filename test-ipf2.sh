@@ -19,6 +19,7 @@ do
                 echo OK
         else
                 echo Disconnected
+                exit
         fi
 
         sleep 1
